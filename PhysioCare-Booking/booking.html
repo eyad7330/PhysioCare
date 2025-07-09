@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhysioCare | حجز جلسة</title>
+  <link rel="stylesheet" href="booking.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="logo.gif" alt="PhysioCare Logo">
+    </div>
+    <h1>احجز جلستك العلاجية</h1>
+    <form id="bookingForm">
+      <input type="text" name="fullName" placeholder="الاسم الثلاثي" required />
+      <input type="tel" name="phone" placeholder="رقم الهاتف" required />
+      <select name="branch" required>
+        <option disabled selected>اختر الفرع</option>
+        <option>إيدن مول - الشيخ زايد</option>
+        <option>أركان مول - الشيخ زايد</option>
+        <option>المهندسين</option>
+        <option>المعادي</option>
+        <option>التجمع الخامس</option>
+      </select>
+      <select name="shift" required>
+        <option disabled selected>اختر الشيفت</option>
+        <option>صباحي</option>
+        <option>مسائي</option>
+      </select>
+      <select name="doctor" required>
+        <option disabled selected>اختر الدكتور</option>
+        <option>د. محمد صادق</option>
+        <option>د. محمد سعيد</option>
+        <option>د. ياسمين احمد</option>
+        <option>د. فريد السعدني</option>
+        <!-- زود زي ما تحب -->
+      </select>
+      <button type="submit">تأكيد الحجز</button>
+    </form>
+    <div id="confirmationMessage" class="hidden">
+      ✅ تم الحجز بنجاح! سيتم التواصل معك عبر واتساب.
+      <br><br>
+      <a href="index.html" class="backBtn">الرجوع للصفحة الرئيسية</a>
+    </div>
+  </div>
+  <script src="booking.js"></script>
+</body>
+</html>
